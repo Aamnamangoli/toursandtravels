@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Travel Website</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+/* SECTION */
+.book-now {
+    width: 100%;
+    padding: 40px 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.heading span {
+    color: #ff6600;
+}
+
+/* FORM DESIGN */
+.booking-form {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.input-box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-box input,
+.input-box select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    outline: none;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn:hover {
+    background: #e65a00;
+}
+    </style>
+</head>
+<body>
+
+    <section class="book-now">
+        <h1 class="heading">Book <span>Now</span></h1>
+
+        <form action="#" class="booking-form">
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-box">
+                <label>Select Destination</label>
+                <select required>
+                    <option value="">-- Choose Destination --</option>
+                    <option>Goa</option>
+<option>Kashmir</option>
+                    <option>Manali</option>
+                    <option>Dubai</option>
+                    <option>Singapore</option>
+                    <option>Thailand</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Travel Date</label>
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <label>Number of Travelers</label>
+                <input type="number" min="1" max="20" required>
+            </div>
+
+            <button type="submit" class="btn">Book Now</button>
+
+        </form>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderLust Travels | Tour Packages</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(to right, #008cba, #00bcd4);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* ===== PACKAGE SECTION ===== */
+.packages {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f7f9fa;
+}
+
+.packages:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.packages h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+position: relative;
+}
+
+.packages h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #008cba;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* ===== PACKAGE CARDS ===== */
+.package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+}
+
+.package-card img {
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.package-card h3 {
+  font-size: 1.3rem;
+  margin: 15px;
+  color: #333;
+}
+
+.package-card p {
+  margin: 0 15px 10px 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.package-card .location {
+  font-weight: bold;
+  color: #008cba;
+}
+
+.package-card .price {
+  font-weight: bold;
+  color: #222;
+  margin-top: 10px;
+}
+
+button {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 15px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #006f96;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>WanderLust Travels</h1>
+    <p>Discover Incredible India and the World Beyond 🌎</p>
+  </header>
+
+  <!-- ===== INDIA PACKAGES ===== -->
+  <section class="packages">
+    <h2>Incredible India Packages</h2>
+
+    <div class="package-container">
+      <!-- Package 1 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Delhi1.jpg") }}>
+        <h3>Golden Triangle Tour</h3>
+        <p class="location">Delhi – Agra – Jaipur</p>
+        <p>Experience India’s royal heritage and Mughal architecture.</p>
+        <p class="price">₹18,999 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Goa.jpg") }}>
+        <h3>Beach Paradise – Goa</h3>
+        <p class="location">Goa, India</p>
+        <p>Relax on sunny beaches and enjoy the vibrant nightlife.</p>
+        <p class="price">₹12,499 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+
+</div>
+
+      <!-- Package 3 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Kerala Backwaters1.jpg") }}>
+        <h3>Backwaters of Kerala</h3>
+        <p class="location">Alleppey, Kerala</p>
+        <p>Enjoy serene houseboat rides and lush green landscapes.</p>
+        <p class="price">₹15,299 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Leh-Ladakh1.jpg") }}>
+        <h3>Adventure in Ladakh</h3>
+        <p class="location">Leh – Nubra Valley</p>
+        <p>Explore high-altitude deserts, monasteries, and scenic valleys.</p>
+        <p class="price">₹22,999 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 5 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Darjeeling.jpg") }}>
+        <h3>Himalayan Escape – Darjeeling</h3>
+        <p class="location">West Bengal, India</p>
+        <p>Witness sunrise at Tiger Hill and sip world-famous tea.</p>
+        <p class="price">₹13,499 / person</p>
+       <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERNATIONAL PACKAGES ===== -->
+  <section class="packages">
+    <h2>🌍 International Packages</h2>
+
+    <div class="package-container">
+      <!-- Package 1 -->
+<div class="package-card">
+        <img src={{ url_for('static', filename="Bali1.jpg") }}>
+        <h3>Tropical Escape – Bali</h3>
+        <p class="location">Bali, Indonesia</p>
+        <p>Relax on beaches and explore Bali’s cultural heart.</p>
+        <p class="price">$799 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Gateway of paris.jpg") }}>
+        <h3>Romantic Getaway – Paris</h3>
+        <p class="location">Paris, France</p>
+        <p>Discover art, cuisine, and love in the City of Lights.</p>
+        <p class="price">$1,199 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Luxury EscapeDubai.jpg") }}>
+        <h3>Luxury Escape – Dubai</h3>
+        <p class="location">Dubai, UAE</p>
+        <p>Shop, dine, and enjoy desert safaris in the City of Gold.</p>
+        <p class="price">$999 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 4 -->
+      <div class="package-card">
+        <img src={{ url_for('static', filename="Adventure of Switzerland.jpg") }}>
+        <h3>Alpine Adventure – Switzerland</h3>
+        <p class="location">Zurich – Lucerne – Interlaken</p>
+        <p>Enjoy snowy mountains, scenic lakes, and chocolate delights.</p>
+        <p class="price">$1,499 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+
+      <!-- Package 5 -->
+<div class="package-card">
+        <img src={{ url_for('static', filename="Luxury retreat maldives.jpg") }}>
+        <h3>Luxury Retreat – Maldives</h3>
+        <p class="location">Male, Maldives</p>
+        <p>Stay in overwater villas surrounded by turquoise lagoons.</p>
+        <p class="price">$1,299 / person</p>
+        <a href="Book Now.html">
+        <button>Book Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 WanderLust Travels | Designed with ❤ by You</p>
+  </footer>
+
+</body>
+</html>
